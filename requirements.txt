@@ -1,0 +1,9 @@
+torch
+tensorboardX
+numpy
+scipy
+numba
+h5py
+plyfile
+six
+timm
