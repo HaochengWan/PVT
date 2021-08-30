@@ -1,4 +1,4 @@
-# Point-Voxel Transformer: An Efficient Approach To 3D Deep Learning
+# PVT: Point-Voxel Transformer for 3D Deep Learning
 ## Prerequisites
 
 The code is built with following libraries (see [requirements.txt](requirements.txt)):
