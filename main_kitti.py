@@ -276,7 +276,7 @@ if __name__ == "__main__":
                         help='Model to use, [pvt]')
     parser.add_argument('--dataset', type=str, default='kitti', metavar='N',
                         choices=['kitti'])
-    parser.add_argument('--batch_size', type=int, default=16, metavar='batch_size',
+    parser.add_argument('--batch_size', type=int, default=32, metavar='batch_size',
                         help='Size of batch)')
     parser.add_argument('--test_batch_size', type=int, default=16, metavar='batch_size',
                         help='Size of batch)')
