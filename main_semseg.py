@@ -100,7 +100,6 @@ def train(args, io):
         test_pred_cls = []
         test_true_seg = []
         test_pred_seg = []
-        start_time = time.time()
         for data, seg in test_loader:
             data, seg = data.to(device), seg.to(device)
             batch_size = data.size()[0]
@@ -116,8 +115,6 @@ def train(args, io):
             test_pred_cls.append(pred_np.reshape(-1))
             test_true_seg.append(seg_np)
             test_pred_seg.append(pred_np)
-        end_time = time.time()
-        print(end_time - start_time)
         # sys.exit(0)
         test_true_cls = np.concatenate(test_true_cls)
         test_pred_cls = np.concatenate(test_pred_cls)
@@ -160,7 +157,6 @@ def test(args, io):
             test_pred_cls = []
             test_true_seg = []
             test_pred_seg = []
-            start_time = time.time()
             for data, seg in test_loader:
                 data, seg = data.to(device), seg.to(device)
                 seg_pred = model(data)
@@ -172,8 +168,6 @@ def test(args, io):
                 test_pred_cls.append(pred_np.reshape(-1))
                 test_true_seg.append(seg_np)
                 test_pred_seg.append(pred_np)
-            end_time = time.time()
-            print(end_time-start_time)
             # sys.exit(0)
             test_true_cls = np.concatenate(test_true_cls)
             test_pred_cls = np.concatenate(test_pred_cls)
