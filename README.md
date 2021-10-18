@@ -53,9 +53,9 @@ The path of the model is in `./checkpoints/cls/model.t7`
 
 ```
 #train
-python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --batch_size 16 --epochs 200 --lr 0.001
+python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --batch_size 32 --epochs 200 --lr 0.001
 
 #test
-python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --eval=True --model_path=checkpoints/cls/model.t7 --test_batch_size 16
+python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --eval=True --model_path=checkpoints/cls/model.t7 --test_batch_size 32
 
 ```
