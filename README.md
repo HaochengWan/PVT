@@ -1,4 +1,6 @@
 # PVT: Point-Voxel Transformer for 3D Deep Learning
+### [ArXiv](https://arxiv.org/abs/2108.06076)
+
 ## Prerequisites
 
 The code is built with following libraries (see [requirements.txt](requirements.txt)):
