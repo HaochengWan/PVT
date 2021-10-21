@@ -61,3 +61,19 @@ python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --batch_size 
 python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --eval=True --model_path=checkpoints/cls/model.t7 --test_batch_size 32
 
 ```
+
+## Citation
+
+If you like our work and think it helpful to your project, please cite it as follows.
+
+```citation
+@article{zhang2021point,
+  title={PVT: Point-Voxel Transformer for 3D Deep Learning},
+  author={Zhang, Cheng and Wan, Haocheng and Liu, Shengqiang and Shen, Xinyi and Wu, Zizhao},
+  journal={arXiv preprint arXiv:2108.06076},
+  year={2021}
+}
+```
+
+## Acknowledge
+I would like to thank the helpful comments and suggestions from Cheng Zhang, Shengqiang Liu, Xinyi Shen, Zizhao Wu.
