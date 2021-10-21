@@ -1,5 +1,17 @@
 # PVT: Point-Voxel Transformer for 3D Deep Learning
-### [ArXiv](https://arxiv.org/abs/2108.06076)
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/point-voxel-transformer-an-efficient-approach/3d-point-cloud-classification-on-modelnet40)](https://paperswithcode.com/sota/3d-point-cloud-classification-on-modelnet40?p=point-voxel-transformer-an-efficient-approach) 
+## Paper and Citation
+The paper can be downloaded from [arXiv](https://arxiv.org/abs/2108.06076).<BR/>
+If you like our work and think it helpful to your project, please cite it as follows.
+
+```citation
+@article{zhang2021point,
+  title={PVT: Point-Voxel Transformer for 3D Deep Learning},
+  author={Zhang, Cheng and Wan, Haocheng and Liu, Shengqiang and Shen, Xinyi and Wu, Zizhao},
+  journal={arXiv preprint arXiv:2108.06076},
+  year={2021}
+}
+```
 
 ## Prerequisites
 
@@ -61,19 +73,3 @@ python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --batch_size 
 python main_cls.py --exp_name=cls --num_points=1024 --use_sgd=True --eval=True --model_path=checkpoints/cls/model.t7 --test_batch_size 32
 
 ```
-
-## Citation
-
-If you like our work and think it helpful to your project, please cite it as follows.
-
-```citation
-@article{zhang2021point,
-  title={PVT: Point-Voxel Transformer for 3D Deep Learning},
-  author={Zhang, Cheng and Wan, Haocheng and Liu, Shengqiang and Shen, Xinyi and Wu, Zizhao},
-  journal={arXiv preprint arXiv:2108.06076},
-  year={2021}
-}
-```
-
-## Acknowledge
-I would like to thank the helpful comments and suggestions from Cheng Zhang, Shengqiang Liu, Xinyi Shen, Zizhao Wu.
