@@ -46,14 +46,14 @@ class SA_Layer(nn.Module):
         nn.Linear(3, channels),
         nn.ReLU(),
         )
-    def forward(self, x):
+    def forward(self, x, rel_pos):
         n = x.shape[2]
         pos = torch.randn(1, n, 3).cuda(0)
         x_q = self.q_conv(x).permute(0, 2, 1) # b, n, c 
         x_k = self.k_conv(x)# b, c, n        
         x_v = self.v_conv(x)
         energy = torch.bmm(x_q, x_k) # b, n, n 
-        attention = self.softmax(energy)
+        attention = self.softmax(energy + rel_pos)
         attention = attention / (1e-9 + attention.sum(dim=1, keepdims=True))
         x_r = torch.bmm(x_v, attention) # b, c, n 
         x_r = self.act(self.after_norm(self.trans_conv(x - x_r)))
