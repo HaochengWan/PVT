@@ -20,9 +20,9 @@ class SharedTransformer(nn.Module):
                                        )
         
 
-    def forward(self, inputs):
+    def forward(self, inputs, rel_pos):
         x = F.relu(self.bn1(self.conv1(inputs)))
-        x1 = self.sa1(x)
+        x1 = self.sa1(x, rel_pos)
         x = torch.cat((x, x1), dim=1)
         x = self.conv_fuse(x)
         return x
