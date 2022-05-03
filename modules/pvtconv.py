@@ -300,12 +300,15 @@ class PVTConv(nn.Module):
     def forward(self, inputs):
         features, coords = inputs
         voxel_features, voxel_coords = self.voxelization(features, coords)
-        pos = coords.permute(0, 2, 1)
-        rel_pos = pos[:, :, None, :] - pos[:, None, :, :]
-        rel_pos = rel_pos.sum(dim=-1)  
+        
         voxel_features = self.voxel_encoder(voxel_features)
         voxel_features = self.SE(voxel_features)
         voxel_features = F.trilinear_devoxelize(voxel_features, voxel_coords, self.resolution, self.training)
+        
+        pos = coords.permute(0, 2, 1)
+        rel_pos = pos[:, :, None, :] - pos[:, None, :, :]
+        rel_pos = rel_pos.sum(dim=-1)  
+        
         fused_features = voxel_features + self.point_features(features, rel_pos)
         return fused_features, coords
 
