@@ -1,5 +1,6 @@
 # PVT: Point-Voxel Transformer for 3D Deep Learning
 [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/point-voxel-transformer-an-efficient-approach/3d-point-cloud-classification-on-modelnet40)](https://paperswithcode.com/sota/3d-point-cloud-classification-on-modelnet40?p=point-voxel-transformer-an-efficient-approach) 
+## We will release the latest code of our PVTv4 at arXiv upon acceptance!
 ## Paper and Citation
 The paper can be downloaded from [arXiv](https://arxiv.org/abs/2108.06076).<BR/>
 If you like our work and think it helpful to your project, please cite it as follows.
